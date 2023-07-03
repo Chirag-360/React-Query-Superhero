@@ -7,18 +7,25 @@ const fetchSuperHeroes = () => {
   return axios.get(`${BASE_URL}/superheroes`);
 };
 
+const onSuccess = () => {
+  console.log("Performed Side-Effect after data fetching");
+};
+
+const onError = () => {
+  console.log("Performed Side-Effect after Encountering Error");
+};
 export const RQSuperhero = () => {
-  const { isLoading, data, isError, error , isFetched , refetch} = useQuery(
+  const { isLoading, data, isError, error, isFetched, refetch } = useQuery(
     ["superhero"],
     fetchSuperHeroes,
     {
-      enabled:true
+      enabled: true,
+      onError,
+      onSuccess,
     }
   );
 
-  // console.log({isFetched})
-
-  if (isLoading ) {
+  if (isLoading) {
     return <h2>Data Is Loading...</h2>;
   }
 
