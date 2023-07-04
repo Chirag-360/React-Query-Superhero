@@ -52,38 +52,42 @@
         "episods": ["meeting penny", "howard goes to spacestation", "sheldon work with bert"]
       }
     ],
-    "colors": [
+    "actorName": [
       {
         "id": 1,
-        "label": "red"
+        "label": "sheldon"
       },
       {
         "id": 2,
-        "label": "blue"
+        "label": "penny"
       },
       {
         "id": 3,
-        "label": "green"
+        "label": "lenerd"
       },
       {
         "id": 4,
-        "label": "yellow"
+        "label": "howard"
       },
       {
         "id": 5,
-        "label": "black"
+        "label": "raj"
       },
       {
         "id": 6,
-        "label": "white"
+        "label": "bernadate"
       },
       {
         "id": 7,
-        "label": "orange"
+        "label": "amy"
       },
       {
         "id": 8,
-        "label": "purple"
+        "label": "priya"
+      },
+      {
+        "id":9,
+        "label":"cinnaman"
       }
     ]
 }
