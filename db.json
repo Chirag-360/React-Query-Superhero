@@ -14,6 +14,80 @@
         "id": 3,
         "name": "Wonder Woman",
         "alterEgo": "Princess Diana"
+      },
+      {
+        "id": 4,
+        "name":"Aquaman",
+        "alterEgo":"Jason Mammoa"
+      },
+      {
+        "id":5,
+        "name":"Spiderman",
+        "alterEgo":"Peter Parker"
+      }
+    ],
+    "friends": [
+      {
+        "id": 1,
+        "name": "Chandler Bing"
+      },
+      {
+        "id": 2,
+        "name": "Joey Tribbiani"
+      },
+      {
+        "id": 3,
+        "name": "Rachel Green"
+      }
+    ],
+    "actors": [
+      {
+        "id": "sheldon@copper.com",
+        "showname": "bigbangtheory"
+      }
+    ],
+    "sitcomes": [
+      {
+        "id": "bigbangtheory",
+        "episods": ["meeting penny", "howard goes to spacestation", "sheldon work with bert"]
+      }
+    ],
+    "actorName": [
+      {
+        "id": 1,
+        "label": "sheldon"
+      },
+      {
+        "id": 2,
+        "label": "penny"
+      },
+      {
+        "id": 3,
+        "label": "lenerd"
+      },
+      {
+        "id": 4,
+        "label": "howard"
+      },
+      {
+        "id": 5,
+        "label": "raj"
+      },
+      {
+        "id": 6,
+        "label": "bernadate"
+      },
+      {
+        "id": 7,
+        "label": "amy"
+      },
+      {
+        "id": 8,
+        "label": "priya"
+      },
+      {
+        "id":9,
+        "label":"cinnaman"
       }
     ]
 }
