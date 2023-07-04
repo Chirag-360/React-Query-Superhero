@@ -1,11 +1,6 @@
 import React from "react";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
-import { BASE_URL } from "./Superhero";
-
-const fetchSuperHeroes = () => {
-  return axios.get(`${BASE_URL}/superheroes`);
-};
+import { useSuperheroData } from "../hooks/useSuperheroData";
+import { Link } from "react-router-dom";
 
 const onSuccess = () => {
   console.log("Performed Side-Effect after data fetching");
@@ -15,15 +10,7 @@ const onError = () => {
   console.log("Performed Side-Effect after Encountering Error");
 };
 export const RQSuperhero = () => {
-  const { isLoading, data, isError, error, isFetched, refetch } = useQuery(
-    ["superhero"],
-    fetchSuperHeroes,
-    {
-      enabled: true,
-      onError,
-      onSuccess,
-    }
-  );
+  const { isLoading, data, isError, error, isFetched, refetch } = useSuperheroData(onError, onSuccess) 
 
   if (isLoading) {
     return <h2>Data Is Loading...</h2>;
@@ -38,8 +25,13 @@ export const RQSuperhero = () => {
       <button onClick={refetch}>Fetch</button>
       <ul>
         {data?.data.map((hero) => (
-          <li key={hero.id}>{hero.name}</li>
+          <li key={hero.id}>
+          <Link to={`/rqsinglesuperhero/${hero.id}`}>
+            {hero.name}
+            </Link>
+            </li>
         ))}
+        {/* {data.map((hero) => (<li key={hero}>{hero}</li>))} */}
       </ul>
     </div>
   );
