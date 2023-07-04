@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import RQSingleSuperhero from "./components/RQSingleSuperhero";
 import ParallelQueries from "./components/ParallelQueries";
-import { DynamicParallelPage }  from "./components/DynamicParallel";
+import DynamicParallelPage   from "./components/DynamicParallel";
 import { DependentQueries } from "./components/DependentQueries";
 import { PaginatedQueries } from "./components/PaginatedQuetries";
 
