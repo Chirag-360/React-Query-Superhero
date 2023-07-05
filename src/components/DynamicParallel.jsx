@@ -15,7 +15,6 @@ const DynamicParallel = ({ heroId }) => {
         };
       }),
     }
-    // some more comment
     //Below Method don't work now worked on older version of react-query
     // heroId.map((id) => {
     //     return {
