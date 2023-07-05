@@ -16,7 +16,7 @@ export const RQSuperhero = () => {
   const { isLoading, data, isError, error, isFetched, refetch } =
     useSuperheroData(onError, onSuccess);
 
-  const {mutate:addHero} =    useAddSuperheroData()
+  const {mutate:addHero} = useAddSuperheroData()
   
   const submitHanlder = () => {
     if (name !== "" && alterEgo !== "" ) {

@@ -9,7 +9,7 @@ import ParallelQueries from "./components/ParallelQueries";
 import DynamicParallelPage   from "./components/DynamicParallel";
 import { DependentQueries } from "./components/DependentQueries";
 import { PaginatedQueries } from "./components/PaginatedQuetries";
-
+import "./App.css"
 const client = new QueryClient();
 function App() {
   return (
