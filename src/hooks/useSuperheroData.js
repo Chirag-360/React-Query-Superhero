@@ -27,8 +27,14 @@ const postSuperhero = (hero) => {
 export const useAddSuperheroData = () => {
   const queryClint = useQueryClient();
   return useMutation(postSuperhero, {
-    onSuccess: () => {
-      queryClint.invalidateQueries("superhero");
+    onSuccess: (data) => {
+      // queryClint.invalidateQueries("superhero");
+      queryClint.setQueriesData("superhero" , (oldQueryData) => {
+         return {
+          ...oldQueryData,
+          data:[...oldQueryData.data, data.data]
+         }
+      })
     },
   });
 };

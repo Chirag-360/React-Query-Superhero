@@ -24,26 +24,6 @@
       "id": 5,
       "name": "Spiderman",
       "alterEgo": "Peter Parker"
-    },
-    {
-      "name": "The Flash",
-      "alterEgo": "Berry Allen",
-      "id": 6
-    },
-    {
-      "name": "Sheldon",
-      "alterEgo": "Copper",
-      "id": 7
-    },
-    {
-      "name": "lennerd",
-      "alterEgo": "hoffsteder",
-      "id": 8
-    },
-    {
-      "name": "rajesh",
-      "alterEgo": "kutrapally",
-      "id": 9
     }
   ],
   "friends": [
