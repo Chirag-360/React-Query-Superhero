@@ -24,6 +24,21 @@
       "id": 5,
       "name": "Spiderman",
       "alterEgo": "Peter Parker"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 6
+    },
+    {
+      "name": "The Ant-Man",
+      "alterEgo": "Paul Walker",
+      "id": 7
+    },
+    {
+      "name": "Silver Surfer",
+      "alterEgo": "Devid Bakham",
+      "id": 8
     }
   ],
   "friends": [

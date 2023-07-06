@@ -1,11 +1,14 @@
 import React from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { request } from "../utils/axios-utils"
 
 import axios from "axios";
 import { BASE_URL } from "../components/Superhero";
 
 const fetchSuperHeroes = () => {
-  return axios.get(`${BASE_URL}/superheroes`);
+  // return axios.get(`${BASE_URL}/superheroes`);
+
+  return request({url:"/superheroes"})
 };
 
 export const useSuperheroData = (onError, onSuccess) => {
@@ -21,7 +24,8 @@ export const useSuperheroData = (onError, onSuccess) => {
 };
 
 const postSuperhero = (hero) => {
-  return axios.post("http://localhost:4000/superheroes", hero);
+  // return axios.post("http://localhost:4000/superheroes", hero);
+  return request({method:"post" , url:"/superheroes" , data:hero})
 };
 
 export const useAddSuperheroData = () => {
@@ -29,12 +33,12 @@ export const useAddSuperheroData = () => {
   return useMutation(postSuperhero, {
     onSuccess: (data) => {
       // queryClint.invalidateQueries("superhero");
-      queryClint.setQueriesData("superhero" , (oldQueryData) => {
-         return {
+      queryClint.setQueriesData("superhero", (oldQueryData) => {
+        return {
           ...oldQueryData,
-          data:[...oldQueryData.data, data.data]
-         }
-      })
+          data: [...oldQueryData.data, data.data],
+        };
+      });
     },
   });
 };
